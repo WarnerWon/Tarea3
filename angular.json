@@ -145,5 +145,8 @@
       }
     }
   },
-  "defaultProject": "Tarea3"
+  "defaultProject": "Tarea3",
+  "cli": {
+    "analytics": false
+  }
 }
