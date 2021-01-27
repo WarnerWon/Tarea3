@@ -1,1 +1,9 @@
-<p>login works!</p>
+<div>
+    <div>
+        <span>Email: <input [(ngModel)]="email" placeholder="email"></span>
+        <span>Password: <input [(ngModel)]="pwd" placeholder="password"></span>
+        <button (click)="login()">Entrar</button>
+    </div>
+    <p>{{ email }}</p>
+    <p>{{ pwd }}</p>
+</div>

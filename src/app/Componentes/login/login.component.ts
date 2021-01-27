@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { LISTA } from "../../Listas/lista_personas";
+import { Router } from '@angular/router';
 import { Usuario } from "../../Clases/usuario";
 
 @Component({
@@ -8,11 +10,19 @@ import { Usuario } from "../../Clases/usuario";
 })
 export class LoginComponent implements OnInit {
 
-  myUser:Usuario;
+  email: String
+  pwd: String
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+
+  }
+
+  login() {
+    let user = LISTA.find(user => user.email === this.email && user.pwd === this.pwd)
+    this.router.navigate(['/usuarios'], { queryParams: { id: user.id } });
+
   }
 
 }

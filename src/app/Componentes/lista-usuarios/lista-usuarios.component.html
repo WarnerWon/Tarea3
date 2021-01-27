@@ -1,0 +1,17 @@
+<div class="skeletoon">
+    <div class="lista_container">
+        <div class="lista">
+            <div class="elemento_container" *ngFor="let usuario of myUsuarios">
+                <div class="elemento">
+                    <h1>{{ usuario.Nombre }}</h1>
+                    <p>datos</p>
+                    <h5>{{ usuario.id }}</h5>
+                    <h5>{{ usuario.email }}</h5>
+                    <h5>{{ usuario.pwd }}</h5>
+                    <h5>{{ usuario.Edad }}</h5>
+                    <button (click)="goBuscar(usuario.id)">mas detalles</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
